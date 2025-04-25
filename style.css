@@ -1,0 +1,396 @@
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #4D3B32;
+    color: #2b2b2b;
+  }
+  
+ /* Header fijo con sombra */
+/* Header */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px; /* Reducción del padding */
+    background-color: #F4E7D2; /* Color de fondo */
+    position: fixed; /* Fija el header */
+    top: 0; /* Pegado a la parte superior */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que el header esté por encima del contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: box-shadow 0.3s ease; /* Efecto suave al cambiar la sombra */
+  }
+  
+  /* Logo y texto del header */
+  .logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  
+  .nombre-estudio {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #4D3B32;
+    font-weight: bold;
+  }
+  
+  /* Espaciado del menú */
+  .menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-right: 40px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #2b2b2b;
+  }
+  
+  .nav-item {
+    font-size: 1.1rem;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .nav-item:hover {
+    color: #5C7655;
+  }
+  
+  /* Animación de los items del menú */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Cada nav-item con retraso para la animación */
+  .nav-item {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  
+  .nav-item:nth-child(1) { animation-delay: 0.3s; }
+  .nav-item:nth-child(2) { animation-delay: 0.5s; }
+  .nav-item:nth-child(3) { animation-delay: 0.7s; }
+  
+  
+  /* Espaciado debajo del header para evitar que se solape con el contenido */
+  body {
+    padding-top: 120px; /* Espacio suficiente para el header fijo */
+  }
+  
+  /* Sección general (ocupa ancho completo) */
+.hero {
+    width: 100%;
+    background-color: #EAE6D7;
+    padding: 60px 20px;
+    margin-top: 80px; /* Ajusta este valor según el tamaño del header */
+    max-width: 100%;
+  }
+  
+  /* Contenido centrado y animado */
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto; /* Centrado horizontal */
+    animation: slideInRight 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+  }
+  
+  .btn {
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #40593c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* sin subrayado */
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animación */
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .sobre-nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 60px;
+    gap: 40px;
+    background-color: #EAE6D7;
+    flex-wrap: wrap;
+    margin: 80px 0; /* Espacio entre secciones */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+  
+  /* Contenedor de texto */
+  .sobre-nosotros .texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+    padding: 0 20px;
+  }
+  
+  .sobre-nosotros .texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+    text-align: center;
+  }
+  
+  .sobre-nosotros .texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Imagen y animaciones */
+  .sobre-nosotros .imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    animation: slideInRight 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .sobre-nosotros .imagen img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sobre-nosotros .imagen img:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+  
+  /* Animaciones */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-80px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(80px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .comentarios {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+  
+  .comentarios-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comentarios h2 {
+    font-family: 'Playfair Display', serif;
+    color: #4D3B32;
+    margin-bottom: 20px;
+  }
+  
+  .comentarios-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .comentarios-form label {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .comentarios-form input,
+  .comentarios-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .comentarios-form button {
+    padding: 12px 20px;
+    background-color: #40593c;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .comentarios-form button:hover {
+    background-color: #5C7655;
+  }
+  
+  .footer {
+    background-color: #EDE3D0;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a {
+    font-size: 48px; /* más grande */
+    color: #4D3B32;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #5C7655;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+  }
+  
+  .footer-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #40593c;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-button .toTop {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .footer-button:hover {
+    background-color: #5C7655;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  html{
+    color-scheme: #4D3B32#EDE3D0#5C7655#EAE6D7;
+    scroll-behavior: smooth;
+}
+
+/* 1) Evita scroll horizontal indeseado */
+html, body {
+    overflow-x: hidden;
+  }
+  
+  /* 2) Haz que el fondo de la sección ocupe todo el ancho del viewport */
+  .sobre-nosotros,
+  .comentarios,
+  .footer {
+    position: relative;
+    width: 100vw;           /* tan ancho como la ventana */
+    left: 50%;              /* sitúa el bloque en el centro */
+    margin-left: -50vw;     /* desplaza la mitad del viewport hacia la izquierda */
+    margin-right: -50vw;    /* idem hacia la derecha */
+    box-sizing: border-box; /* incluye padding en el cálculo de ancho */
+  }
+  
+  /* 3) Mantén tu contenido interno centrado y con el ancho que ya tenías */
+  .sobre-nosotros .texto,
+  .sobre-nosotros .imagen,
+  .comentarios-container {
+    max-width: 1200px; /* o el valor que ya estabas usando */
+    margin: 0 auto;    /* centra el contenido dentro del full-width */
+    padding: 0 60px;   /* tu padding lateral (ajústalo si quieres) */
+  }
+  
+  /* 4) Añade separación entre comentarios y footer */
+  .comentarios {
+    margin-bottom: 80px;
+  }
+  
+  .footer {
+    margin-top: 80px;
+  }
+  

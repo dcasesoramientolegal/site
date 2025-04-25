@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Estudio Jurídico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header  id="home" class="encabezado">
+        <div class="logo-contenedor">
+          <img src="logo/DC - Logo.png" alt="Logo Estudio Jurídico" class="logo">
+          <span class="nombre-estudio">ESTUDIO JURÍDICO</span>
+        </div>
+        
+        <nav class="nav">
+            <ul class="menu">
+              <li><a href="#hero" class="nav-item">Inicio</a></li>
+              <li><a href="#sobre-nosotros" class="nav-item">Sobre mí</a></li>
+              <li><a href="#comentarios" class="nav-item">Comentarios</a></li>
+              <li><a href="#contacto" class="nav-item">Contacto</a></li>
+            </ul>
+          </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Soluciones<br>Legales<br>Confiables</h1>
+      <p>asesoramiento jurídico integral<br>con un enfoque moderno y personalizado.</p>
+      <a href="#contacto" class="btn">Contáctame</a>
+    </div>
+  </section>
+
+  <section id="sobre-nosotros" class="sobre-nosotros">
+    <div class="texto">
+      <h2>Sobre Mi</h2>
+      <p>
+        texto de prueba escrito para que quede completa esta zona y<br>
+        se pueda ver con claridad como sería escribir un párrafo entero
+      </p>
+    </div>
+    <div class="imagen">
+      <a href="https://www.instagram.com/dcasesoramientolegal/" target="_blank"><img src="logo/IMG_5015.jpeg" alt="Foto abogada"></a>
+    </div>  
+  </section>
+
+  <section id="comentarios" class="comentarios">
+    <div class="comentarios-container">
+      <h2>Déjame tu Comentario</h2>
+      <form action="https://formspree.io/f/mnndnagv" method="POST" class="comentarios-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+  
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+  
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer id="contacto" class="footer">
+    <div class="social-icons">
+      <a href="https://wa.me/tuNumero" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/tuUsuario" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:lariacatalogni@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  
+    <div class="footer-button">
+      <a class="toTop" href="#home" id="toTopLink">Ir al inicio</a>
+    </div>
+  </footer>
+  <script>
+    const link = document.getElementById('toTopLink');
+    link.addEventListener('click', e => {
+      e.preventDefault();                       // no navegues por defecto
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // opcional: limpiar la parte '#' de la URL
+      history.replaceState(null, '', window.location.pathname);
+    });
+  </script>
+  
+</body>
+</html>
