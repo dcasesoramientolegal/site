@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Estudio Jurídico</title>
+  <title>Estudio Jurídico DC</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -10,62 +10,172 @@
 <body>
     <header  id="home" class="encabezado">
         <div class="logo-contenedor">
-          <img src="logo/DC - Logo.png" alt="Logo Estudio Jurídico" class="logo">
+          <img src="logo/IMG_5261.PNG" alt="Logo Estudio Jurídico" class="logo">
           <span class="nombre-estudio">ESTUDIO JURÍDICO</span>
         </div>
         
         <nav class="nav">
-            <ul class="menu">
-              <li><a href="#hero" class="nav-item">Inicio</a></li>
-              <li><a href="#sobre-nosotros" class="nav-item">Sobre mí</a></li>
-              <li><a href="#comentarios" class="nav-item">Comentarios</a></li>
-              <li><a href="#contacto" class="nav-item">Contacto</a></li>
-            </ul>
-          </nav>
+          <ul class="menu">
+            <li><a href="#hero" class="nav-item">Inicio</a></li>
+            <li><a href="#sobre-nosotros" class="nav-item">Sobre mí</a></li>
+        
+            <li class="dropdown">
+              <a href="#areas" class="nav-item dropbtn">Áreas de práctica</a>
+              <div class="dropdown-content">
+                <a href="#areas">Accidentes laborales</a>
+                <a href="#areas">Enfermedades laborales</a>
+                <a href="#areas">Reclamos en la ART</a>
+                <a href="#areas">Despidos</a>
+                <a href="#areas">Redacción de contratos laborales</a>
+                <a href="#areas">Accidentes de tránsito</a>
+                <a href="#areas">Alimentos</a>
+                <a href="#areas">Divorcios</a>
+                <a href="#areas">Sucesiones</a>
+                <a href="#areas">Usucapión</a>
+              </div>
+            </li>
+            <li><a href="#contacto" class="nav-item">Contacto</a></li>
+        
+            <li class="consulta-item"> 
+              <a href="https://wa.me/+5491165477968" target="_blank" class="nav-item">
+                <div class="consulta-texto">
+                  <span class="consulta-titulo">CONSULTAS</span><br>
+                  <span class="consulta-horario">de 9 a 19 hs</span>
+                </div>
+              </a>
+              <i id="whatsapp-header" class="fab fa-whatsapp"></i>
+            </li>
+          </ul>
+        </nav>
+        
   </header>
 
   <section id="hero" class="hero">
+    <div class="hero-bg"></div>
     <div class="hero-content">
       <h1>Soluciones<br>Legales<br>Confiables</h1>
-      <p>asesoramiento jurídico integral<br>con un enfoque moderno y personalizado.</p>
+      <p>En DC Estudio Jurídico trabajamos día a día <br>
+        para brindar asesoramiento jurídico personalizado <br>
+        y de excelencia.<br>
+        <br><b>Tu confianza es nuestro mayor compromiso</b>.
+      </p>
       <a href="#contacto" class="btn">Contáctame</a>
-    </div>
-  </section>
+ </section>
 
   <section id="sobre-nosotros" class="sobre-nosotros">
     <div class="texto">
-      <h2>Sobre Mi</h2>
+      <h2>Sobre mí</h2>
       <p>
-        texto de prueba escrito para que quede completa esta zona y<br>
-        se pueda ver con claridad como sería escribir un párrafo entero
+        Mi nombre es <b>Daiana Cristaldo</b>, me gradué como abogada en la Universidad Nacional de La Matanza en 2012. Actualmente, me especializo en <b>Derecho Laboral</b> y <b>Derecho Civil</b>, acompañando a mis clientes en la defensa de sus derechos con <em>responsabilidad</em>, <em>cercanía</em> y <em>profesionalismo</em>.<br>
+        Nuestro objetivo es ofrecer soluciones legales claras, efectivas y adaptadas a las necesidades de cada persona.<br>
+        ¡Te invitamos a conocernos y a dar el primer paso hacia la resolución de tu consulta legal!
       </p>
     </div>
     <div class="imagen">
       <a href="https://www.instagram.com/dcasesoramientolegal/" target="_blank"><img src="logo/IMG_5015.jpeg" alt="Foto abogada"></a>
     </div>  
   </section>
-
-  <section id="comentarios" class="comentarios">
-    <div class="comentarios-container">
-      <h2>Déjame tu Comentario</h2>
-      <form action="https://formspree.io/f/mnndnagv" method="POST" class="comentarios-form">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+  <section id="areas" class="areas-practica">
+    <div class="titulo-areas">
+      <h3>Áreas de</h3>
+      <h1>Práctica</h1>
+    </div>
   
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
+    <div class="separador"></div>
   
-        <label for="comentario">Comentario:</label>
-        <textarea id="comentario" name="comentario" rows="4" required></textarea>
+    <div class="lista-areas">
+      <div class="columna">
+        <ul>
+          <li>Accidentes laborales</li>
+          <li>enfermedades laborales</li>
+          <li>Reclamos en la ART</li>
+          <li>Despidos</li>
+          <li>Redacción de contratos laborales</li>
+        </ul>
+      </div>
+      <div class="columna">
+        <ul>
+          <li>Accidentes de tránsito</li>
+          <li>Alimentos</li>
+          <li>Divorcios</li>
+          <li>Sucesiones</li>
+          <li>Usucapión</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   
-        <button type="submit" class="btn-enviar">Enviar</button>
-      </form>
+  <section id="como-trabajamos" class="servicios">
+    <div class="servicio">
+      <i class="fas fa-phone"></i> <!-- Ícono de teléfono -->
+      <h3>Contacto</h3>
+      <p>¡Comunicate con nosotros! Solo necesitamos que nos proporciones la información relevante sobre tu situación, y si es necesario, organizaremos una consulta.</p>
+    </div>
+    
+    <div class="servicio">
+      <i class="fas fa-comments"></i> <!-- Ícono de consulta -->
+      <h3>Consulta</h3>
+      <p>Agendamos una consulta en el día y hora que mejor te quede. Si la consulta es sobre <b>temas laborales, será sin costo</b>. Para otros asuntos, se aplicará un arancel.  
+      </p>
+    </div>
+    
+    <div class="servicio">
+      <i class="fas fa-file-invoice-dollar"></i> <!-- Ícono de presupuesto -->
+      <h3>Presupuesto</h3>
+      <p>Si decidís contar con nuestra representación, te vamos a enviar un presupuesto detallado que incluirá nuestros honorarios y los costos del procedimiento.  
+      </p>
+    </div>
+    
+    <div class="servicio">
+      <i class="fas fa-balance-scale"></i> <!-- Ícono de representación -->
+      <h3>Representación</h3>
+      <p>En caso de avanzar, ¡comenzaremos de inmediato a gestionar tu caso! </p>
     </div>
   </section>
 
+  <section id="testimonios" class="testimonios">
+      <h2>Testimonios</h2>
+      <div class="contenedor-testimonios">
+        <div class="testimonio">
+          <img src="logo/1.png" alt="Testimonio de Verónica">
+        </div>
+        <div class="testimonio">
+          <img src="logo/2.png" alt="Testimonio de Cristian">
+        </div>
+        <div class="testimonio">
+          <img src="logo/3.png" alt="Testimonio de Julio">
+        </div>
+      </div>
+  </section>
+
+  <section id="comentarios" class="comentarios">
+    <div class="comentarios-container">
+      <div class="comentarios-content">
+        <div class="comentarios-imagen">
+          <img src="logo/ft1.png" alt="Foto contacto" />
+        </div>
+        <div class="comentarios-formulario">
+          <h2>¡Quiero que me contacten!</h2>
+          <form action="https://formspree.io/f/mnndjqqb" method="POST" class="comentarios-form">
+            
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+            
+            <textarea id="comentario" name="comentario" rows="4" placeholder="Comentario" required></textarea>
+            
+            <button type="submit" class="btn-enviar">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
   <footer id="contacto" class="footer">
     <div class="social-icons">
-      <a href="https://wa.me/tuNumero" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://wa.me/+5491165477968" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/dcasesoramientolegal/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="mailto:lariacatalogni@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
     </div>
@@ -83,6 +193,29 @@
       history.replaceState(null, '', window.location.pathname);
     });
   </script>
-  
+ <script>
+  // Animación de servicios
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.servicio').forEach(servicio => {
+    observer.observe(servicio);
+  });
+
+  // Animación al cargar de "Áreas de práctica"
+  window.addEventListener('load', () => {
+    const areasPractica = document.querySelector('.areas-practica');
+    areasPractica.classList.add('visible');
+  });
+</script>
 </body>
 </html>
