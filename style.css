@@ -1,147 +1,77 @@
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #805540;
-    color: #2b2b2b;
-  }
-  
- /* Header fijo con sombra */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #805540;
+  color: #2b2b2b;
+}
+
+/* Header fijo con sombra */
 /* Header */
 .encabezado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px; /* Reducción del padding */
-    background-color: #EDE3D0; /* Color de fondo */
-    position: fixed; /* Fija el header */
-    top: 0; /* Pegado a la parte superior */
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Asegura que el header esté por encima del contenido */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    transition: box-shadow 0.3s ease; /* Efecto suave al cambiar la sombra */
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px; /* Reducción del padding */
+  background-color: #EDE3D0; /* Color de fondo */
+  position: fixed; /* Fija el header */
+  top: 0; /* Pegado a la parte superior */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Asegura que el header esté por encima del contenido */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  transition: box-shadow 0.3s ease; /* Efecto suave al cambiar la sombra */
+}
 
-  .consulta-item {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* separa el texto del icono */
-  }
-  
-  .consulta-texto {
-    text-align: right;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .consulta-titulo {
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .consulta-horario {
-    font-size: 14px;
-    color: #333;
-  }
-  
-  #whatsapp-header {
-    font-size: 28px;
-    color: #5C7655;
-  }
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px; /* o 1200px, lo que quede mejor con tu diseño */
+  margin: 0 auto;
+  width: 100%;
+}
 
-  .consulta-item:hover .consulta-texto {
-    color: #5C7655;
-  }
-  
-  .consulta-item:hover .consulta-titulo,
-  .consulta-item:hover .consulta-horario {
-    color: #5C7655;
-  }
+.consulta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* separa el texto del icono */
+}
 
-  .consulta-texto, .consulta-titulo, .consulta-horario {
-    transition: color 0.3s ease;
-  }
-  
-    /* Animación de los items del menú */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    /* Cada con retraso para la animación */
-    .consulta-texto, .consulta-titulo, .consulta-horario, #whatsapp-header {
-      animation: fadeInUp 0.8s ease forwards;
-      opacity: 0;
-    }
+.consulta-texto {
+  text-align: right;
+  font-size: 14px;
+  color: #333;
+}
 
-    .consulta-texto, .consulta-titulo, .consulta-horario, #whatsapp-header { animation-delay: 0.11s; }
+.consulta-titulo {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
 
+.consulta-horario {
+  font-size: 14px;
+  color: #333;
+}
 
-  /* Logo y texto del header */
-  .logo-contenedor {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .logo {
-    width: 120px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 50%;
-  }
-  
-  .nombre-estudio {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: #4D3B32;
-    font-weight: bold;
-  }
-  
-  /* Espaciado del menú */
-  .menu {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    margin-right: 40px;
-    font-family: 'Playfair Display', serif;
-  }
-  
-  .menu li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #2b2b2b;
-  }
-  
-  .nav-item {
-    font-size: 1.1rem;
-    margin-left: 20px;
-    transition: color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .nav-item:hover {
-    color: #5C7655;
-  }
-  
+#whatsapp-header {
+  font-size: 28px;
+  color: #5C7655;
+}
+
+.consulta-item:hover .consulta-texto {
+  color: #5C7655;
+}
+
+.consulta-item:hover .consulta-titulo,
+.consulta-item:hover .consulta-horario {
+  color: #5C7655;
+}
+
+.consulta-texto, .consulta-titulo, .consulta-horario {
+  transition: color 0.3s ease;
+}
+
   /* Animación de los items del menú */
   @keyframes fadeInUp {
     from {
@@ -154,547 +84,651 @@
     }
   }
   
-  /* Cada nav-item con retraso para la animación */
-  .nav-item {
+  /* Cada con retraso para la animación */
+  .consulta-texto, .consulta-titulo, .consulta-horario, #whatsapp-header {
     animation: fadeInUp 0.8s ease forwards;
     opacity: 0;
   }
-  
-  .nav-item:nth-child(1) { animation-delay: 0.3s; }
-  .nav-item:nth-child(2) { animation-delay: 0.5s; }
-  .nav-item:nth-child(3) { animation-delay: 0.7s; }
-  .nav-item:nth-child(4) { animation-delay: 0.9s; }
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropbtn::after {
-    content: " ▼"; /* flechita de desplegar */
-    font-size: 0.6em;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #EDE3D0; /* el mismo fondo que usás */
-    min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1000;
-    flex-direction: column;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #d9d4c3; /* un poquito más oscuro al hover */
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: flex;
-  }
-  
-  
-  /* Espaciado debajo del header para evitar que se solape con el contenido */
-  body {
-    padding-top: 120px; /* Espacio suficiente para el header fijo */
-  }
-  
-  .hero {
-    position: relative;
-    width: 100%;
-    background-color: #EAE6D7;
-    padding: 60px 20px;
-    margin-top: 80px;
-    overflow: hidden;
-  }
-  
-  /* Fondo de imagen decorativa */
-  .hero-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 50%; /* solo ocupa la derecha */
-    background: linear-gradient(to right, rgba(234, 230, 215, 1) 0%, 
-    rgba(234, 230, 215, 0.9) 20%, 
-    rgba(234, 230, 215, 0.6) 40%, 
-    rgba(234, 230, 215, 0) 60%
-    ), 
-                url('logo/columna.jpg') no-repeat center right;
-    background-size: cover;
-    pointer-events: none; /* la imagen no bloquea clicks */
-    z-index: 1;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2; /* Sobre la imagen */
-    max-width: 800px;
-    margin: 0 auto;
-    animation: slideInRight 1s ease-out forwards;
+
+  .consulta-texto, .consulta-titulo, .consulta-horario, #whatsapp-header { animation-delay: 0.11s; }
+
+
+/* Logo y texto del header */
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.nombre-estudio {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #4D3B32;
+  font-weight: bold;
+}
+
+/* Espaciado del menú */
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-right: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+.nav-item {
+  font-size: 1.1rem;
+  margin: 0 ;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #5C7655;
+}
+
+/* Animación de los items del menú */
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    text-align: justify;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cada nav-item con retraso para la animación */
+.nav-item {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.3s; }
+.nav-item:nth-child(2) { animation-delay: 0.5s; }
+.nav-item:nth-child(3) { animation-delay: 0.7s; }
+.nav-item:nth-child(4) { animation-delay: 0.7 s; }
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn::after {
+  content: " ▼"; /* flechita de desplegar */
+  font-size: 0.6em;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #EDE3D0; /* el mismo fondo que usás */
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #d9d4c3; /* un poquito más oscuro al hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+
+/* Espaciado debajo del header para evitar que se solape con el contenido */
+body {
+  padding-top: 120px; /* Espacio suficiente para el header fijo */
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  background-color: #EAE6D7;
+  padding: 60px 20px;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+/* Fondo de imagen decorativa */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%; /* solo ocupa la derecha */
+  background: linear-gradient(to right, rgba(234, 230, 215, 1) 0%, 
+  rgba(234, 230, 215, 0.9) 20%, 
+  rgba(234, 230, 215, 0.6) 40%, 
+  rgba(234, 230, 215, 0) 60%
+  ), 
+              url('logo/columna.jpg') no-repeat center right;
+  background-size: cover;
+  pointer-events: none; /* la imagen no bloquea clicks */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Sobre la imagen */
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slideInRight 1s ease-out forwards;
+  opacity: 0;
+  text-align: justify;
 /*     text-justify: inter-word;
- */  }
-  
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 50px;
-    text-align: left;
-    text-justify: inter-word;
-  }
-  
-  .btn {
-    padding: 14px 28px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #5C7655;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none; /* sin subrayado */
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Animación */
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .sobre-nosotros {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 100px 60px;
-    gap: 40px;
-    background-color: #EAE6D7;
-    flex-wrap: wrap;
-    margin: 80px 0; /* Espacio entre secciones */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-  }
-  
-  /* Contenedor de texto */
-  .sobre-nosotros .texto {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    animation: slideInLeft 1s ease-out forwards;
-    opacity: 0;
-    padding: 0 20px;
-  }
-  
-  .sobre-nosotros .texto h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #1e1e1e;
-    text-align: center;
-  }
-  
-  .sobre-nosotros .texto p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-    text-align: justify;
-  }
-  
-  /* Imagen y animaciones */
-  .sobre-nosotros .imagen {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    animation: slideInRight 1s ease-out forwards;
-    opacity: 0;
-  }
-  
-  .sobre-nosotros .imagen img {
-    width: 80%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 16px;
-    object-fit: cover;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  .sobre-nosotros .imagen img:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transform: scale(1.02);
-  }
-  
-  /* Animaciones */
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-80px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(80px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .areas-practica {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #EAE6D7;
-    padding: 100px 60px;
-    gap: 40px;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 80px 0; /* Espacio entre secciones */
-    
-  }
-  
+*/  }
 
-  .titulo-areas {
-    flex: 1;
-    font-family: 'Playfair Display', serif;
-    padding-right: 20px; /* Pequeño margen interno para no pegarse al separador */
-  }
-  
-  .titulo-areas h3 {
-    font-size: 48px;
-    margin: 0;
-    color: #5C7655; /* Puedes ajustar el color si quieres */
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out forwards;
-    animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
-  }
-  
-  .titulo-areas h1 {
-    font-size: 96px;
-    font-weight: bold;
-    margin: 10px 0 0 0;
-    color: #5C7655;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out forwards;
-    animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
-  }
-  
-  .separador {
-    width: 2px;
-    background-color: #5C7655;
-    height: 250px; /* Ajusta la altura según necesidad */
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out forwards;
-    animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
-  }
-  
-  .lista-areas {
-    flex: 2;
-    display: flex;
-    gap: 60px;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out forwards;
-    animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
-  }
-  
-  .columna {
-    flex: 1;
-  }
-  
-  .columna ul {
-    list-style: none;
-    padding: 0;
-    font-family: 'Playfair Display', sans-serif;
-  }
-  
-  .columna li {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-family: 'Playfair Display', sans-serif;
-  }
-  
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
 
-  .comentarios {
-    padding: 60px 20px;
-    background-color: #EAE6D7;
-    width: 100%;
-  }
-  
-  .comentarios-container {
-    max-width: 1200px; /* Más ancho para que entren imagen + form */
-    margin: 0 auto;
-    background-color: #EAE6D7;
-    padding: 30px;
-    border-radius: 8px;
-   /*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .comentarios-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap; /* Para que en celular se acomoden */
-  }
-  
-  .comentarios-imagen img {
-    width: 400px;
-    max-width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-     /* Animación de entrada */
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out forwards;
-    animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  text-align: left;
+  text-justify: inter-word;
+}
 
-  .comentarios-formulario {
-    flex: 1; /* El formulario ocupa el espacio disponible */
+.btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #5C7655;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none; /* sin subrayado */
+  font-family: 'Inter', sans-serif;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
   }
-  
-  .comentarios h2 {
-    font-family: 'Playfair Display', serif;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 35px;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .comentarios-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+}
+
+.sobre-nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 60px;
+  gap: 40px;
+  background-color: #EAE6D7;
+  flex-wrap: wrap;
+  margin: 80px 0; /* Espacio entre secciones */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+/* Contenedor de texto */
+.sobre-nosotros .texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideInLeft 1s ease-out forwards;
+  opacity: 0;
+  padding: 0 20px;
+}
+
+.sobre-nosotros .texto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+  text-align: center;
+}
+
+.sobre-nosotros .texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+/* Imagen y animaciones */
+.sobre-nosotros .imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: slideInRight 1s ease-out forwards;
+  opacity: 0;
+}
+
+.sobre-nosotros .imagen img {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.sobre-nosotros .imagen img:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+/* Animaciones */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
   }
-  
-  .comentarios-form input,
-  .comentarios-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box; /* Asegura que el padding no agrande el ancho */
-    font-family: 'Inter', sans-serif;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .comentarios-form button {
-    padding: 8px 20px;
-    background-color: #40593c;
-    color: #fff;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 30%; /* Botón más compacto */
-    display: inline-block;
-    align-self: center;
-    text-align: center;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
   }
-  
-  .comentarios-form button:hover {
-    background-color: #5C7655;
-  }  
-  
-  .footer {
-    background-color: #EDE3D0;
-    padding: 40px 0;
-    text-align: center;
-    width: 100%; /* Asegura que ocupe todo el ancho */
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+.areas-practica {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #EAE6D7;
+  padding: 100px 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 80px 0; /* Espacio entre secciones */
   
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-bottom: 20px;
+}
+
+
+.titulo-areas {
+  flex: 1;
+  font-family: 'Playfair Display', serif;
+  padding-right: 20px; /* Pequeño margen interno para no pegarse al separador */
+}
+
+.titulo-areas h3 {
+  font-size: 48px;
+  margin: 0;
+  color: #5C7655; /* Puedes ajustar el color si quieres */
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
+}
+
+.titulo-areas h1 {
+  font-size: 96px;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  color: #5C7655;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
+}
+
+.separador {
+  width: 2px;
+  background-color: #5C7655;
+  height: 250px; /* Ajusta la altura según necesidad */
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
+}
+
+.lista-areas {
+  flex: 2;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
+}
+
+.columna {
+  flex: 1;
+}
+
+.columna ul {
+  list-style: none;
+  padding: 0;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.columna li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+
+.comentarios {
+  padding: 60px 20px;
+  background-color: #EAE6D7;
+  width: 100%;
+}
+
+.comentarios-container {
+  max-width: 1200px; /* Más ancho para que entren imagen + form */
+  margin: 0 auto;
+  background-color: #EAE6D7;
+  padding: 30px;
+  border-radius: 8px;
+ /*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.comentarios-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Para que en celular se acomoden */
+}
+
+.comentarios-imagen img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+   /* Animación de entrada */
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s; /* Pequeño retardo para que quede aún más suave */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .social-icons a {
-    font-size: 48px; /* más grande */
-    color: #4D3B32;
-    transition: all 0.3s ease;
-    text-decoration: none;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .social-icons a:hover {
-    color: #5C7655;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
-  }
-  
-  .footer-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #5C7655;
-    padding: 10px 20px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-  }
-  
-  .footer-button .toTop {
-    color: white;
-    font-size: 16px;
-    text-decoration: none;
-  }
-  
-  .footer-button:hover {
-    background-color: #5C7655;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  html{
-    color-scheme: #805540#EDE3D0#5C7655#EAE6D7;
-    scroll-behavior: smooth;
+}
+
+
+.comentarios-formulario {
+  flex: 1; /* El formulario ocupa el espacio disponible */
+}
+
+.comentarios h2 {
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.comentarios-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comentarios-form input,
+.comentarios-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box; /* Asegura que el padding no agrande el ancho */
+  font-family: 'Inter', sans-serif;
+}
+
+.comentarios-form button {
+  padding: 8px 20px;
+  background-color: #40593c;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 30%; /* Botón más compacto */
+  display: inline-block;
+  align-self: center;
+  text-align: center;
+}
+
+.comentarios-form button:hover {
+  background-color: #5C7655;
+}  
+
+.footer {
+  background-color: #EDE3D0;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  font-size: 48px; /* más grande */
+  color: #4D3B32;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #5C7655;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* .footer-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #5C7655;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.footer-button .toTop {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-button:hover {
+  background-color: #5C7655;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+ */
+
+html{
+  color-scheme: #805540#EDE3D0#5C7655#EAE6D7;
+  scroll-behavior: smooth;
 }
 
 /* 1) Evita scroll horizontal indeseado */
 html, body {
-    overflow-x: hidden;
-  }
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1; /* Esto empuja el footer hacia abajo si hay poco contenido */
+}
+
   
-  /* 2) Haz que el fondo de la sección ocupe todo el ancho del viewport */
-  .sobre-nosotros,
-  .comentarios,
-  .footer {
-    position: relative;
-    width: 100vw;           /* tan ancho como la ventana */
-    left: 50%;              /* sitúa el bloque en el centro */
-    margin-left: -50vw;     /* desplaza la mitad del viewport hacia la izquierda */
-    margin-right: -50vw;    /* idem hacia la derecha */
-    box-sizing: border-box; /* incluye padding en el cálculo de ancho */
-  }
+body > article {
+  flex: 1;
+}
   
-  /* 3) Mantén tu contenido interno centrado y con el ancho que ya tenías */
-  .sobre-nosotros .texto,
-  .sobre-nosotros .imagen,
-  .comentarios-container {
-    max-width: 1200px; /* o el valor que ya estabas usando */
-    margin: 0 auto;    /* centra el contenido dentro del full-width */
-    padding: 0 60px;   /* tu padding lateral (ajústalo si quieres) */
-  }
-  
-  /* 4) Añade separación entre comentarios y footer */
-  .comentarios {
-    margin-bottom: 80px;
-  }
-  
-  .footer {
-    margin-top: 80px;
-  }
-  
-  #como-trabajamos {
-    max-width: 100%;
-    background-color: #EAE6D7; /* El fondo ahora cubre todo */
-    padding: 100px 60px;
-    margin: 80px 0;
+/* 2) Haz que el fondo de la sección ocupe todo el ancho del viewport */
+.sobre-nosotros,
+.comentarios,
+.footer {
+  position: relative;
+  width: 100vw;           /* tan ancho como la ventana */
+  left: 50%;              /* sitúa el bloque en el centro */
+  margin-left: -50vw;     /* desplaza la mitad del viewport hacia la izquierda */
+  margin-right: -50vw;    /* idem hacia la derecha */
+  box-sizing: border-box; /* incluye padding en el cálculo de ancho */
+}
+
+/* 3) Mantén tu contenido interno centrado y con el ancho que ya tenías */
+.sobre-nosotros .texto,
+.sobre-nosotros .imagen,
+.comentarios-container {
+  max-width: 1200px; /* o el valor que ya estabas usando */
+  margin: 0 auto;    /* centra el contenido dentro del full-width */
+  padding: 0 60px;   /* tu padding lateral (ajústalo si quieres) */
+}
+
+/* 4) Añade separación entre comentarios y footer */
+.comentarios {
+  margin-bottom: 80px;
+}
+
+.footer {
+  margin-top: 80px;
+}
+
+#como-trabajamos {
+  max-width: 100%;
+  background-color: #EAE6D7; /* El fondo ahora cubre todo */
+  padding: 100px 60px;
+  margin: 80px 0;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin: 50px auto 30px auto;
+  color: #333;
+  width: 100%;
 }
 
 .servicios {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* <-- Esto es clave */
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+align-items: flex-start; /* <-- Esto es clave */
+flex-wrap: wrap;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 40px;
+box-sizing: border-box;
 }
 
 .servicio {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 1s ease, transform 1s ease;
 }
 
 .servicio.visible {
-  opacity: 1;
-  transform: translateY(0);
+opacity: 1;
+transform: translateY(0);
 }
 
 .servicio {
-    text-align: center;
-    width: 22%;
-    min-width: 220px;
-    margin: 20px 0;
+  text-align: center;
+  width: 22%;
+  min-width: 220px;
+  margin: 20px 0;
 }
 
 .servicio i {
-    font-size: 55px;
-    color: #5C7655;
-    margin-bottom: 15px;
+  font-size: 55px;
+  color: #5C7655;
+  margin-bottom: 15px;
 }
 
 .servicio h3 {
-    font-size: 24px;
-    color: #333; /* Puedes ajustar este color si quieres otro */
-    margin-bottom: 10px;
-    font-family: 'Playfair Display', serif; /* o tu fuente que uses */
+  font-size: 24px;
+  color: #333; /* Puedes ajustar este color si quieres otro */
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif; /* o tu fuente que uses */
 }
 
 .servicio p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.5;
-  text-align: center;
-  padding: 0% 15% 0% 15%;
+font-size: 16px;
+color: #555;
+line-height: 1.5;
+text-align: center;
+padding: 0% 15% 0% 15%;
 }
 
 #testimonios {
   background-color: #EAE6D7;
-  padding:100px 60px;
+  padding: 100px 60px;
   text-align: center;
-  margin: 80px 0; /* Espacio entre secciones */
+  margin: 80px 0;
+  position: relative; /* importante para posicionar las flechas */
 }
 
 #testimonios h2 {
@@ -704,24 +738,180 @@ html, body {
   color: #333;
 }
 
-.contenedor-testimonios {
+.swiper-container {
+  width: 100%;
+  padding: 40px 0;
+  position: relative; /* asegura que los botones estén relativos a este contenedor */
+}
+
+.swiper-slide {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
+  opacity: 0.4;
+  transition: transform 0.8s ease, filter 0.8s ease, opacity 0.8s ease;
+  transform: scale(0.3);
+  filter: blur(2px) brightness(0.8);
 }
 
-.testimonio {
-  flex: 1 1 300px; /* que se adapten pero mantengan un mínimo */
-  max-width: 350px;
+.swiper-slide.active-center {
+  opacity: 1;
+  transform: scale(1);
+  filter: none;
 }
 
-.testimonio img {
+.swiper-slide.adjacent {
+  opacity: 0.8;
+  transform: scale(0.3);
+  filter: blur(1px) brightness(0.9);
+}
+
+
+.swiper-slide img {
   width: 100%;
-  height: auto;
+  max-width: 350px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Posicionamiento de flechas */
+.swiper-button-prev,
+.swiper-button-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+/* Íconos reales de las flechas */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #5C7655 !important;
+  font-size: 20px;
+}
+
+/* Paginación */
+.swiper-pagination-bullet {
+  background: #999;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #5C7655 !important;
+}
+
+
+.seccion-visible {
+  display: block;
+}
+
+.seccion-oculta {
+  display: none;
+}
+
+/* #indemnizaciones {
+  height: 100%;           /* o el alto que necesites 
+  overflow-y: auto;
+} */
+
+.indemnizaciones-seccion {
+  max-width: 100%;
+  background-color: #EAE6D7;
+  padding: 100px 60px;
+  margin: 80px 0;
+}
+
+#indemnizaciones h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;
+}
+
+#indemnizaciones h3 {
+  text-align: center;
+  font-size: 35px;
+  color: #4D3B32;
+  margin-top: 60px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Tablas */
+.tabla-indemnizaciones {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  font-family: 'Inter', serif;
+  background-color: #EAE6D7;
+/*   box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Encabezados */
+.tabla-indemnizaciones th {
+  background-color: #EAE6D7;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  padding: 18px;
+  font-size: 25px;
+}
+
+/* Celdas */
+.tabla-indemnizaciones td {
+  padding: 16px 20px;
+  text-align: center;
+  vertical-align: top;
+  color: #444;
+/*   font-size: 16px; */
+  line-height: 1.5;
+  border-top: 1px solid #EAE6D7;
+}
+.formula-indemnizacion {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.tabla-indemnizaciones td,
+.tabla-indemnizaciones th {
+  width: 50%;
+}
+
+/* Fila alterna */
+.tabla-indemnizaciones tr:nth-child(even) {
+  background-color: #EAE6D7;
+}
+
+.texto-renuncia {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+  font-family: 'Inter', serif;
+  color: #333;
+  text-align: center;
+}
+
+.columna-renuncia {
+  flex: 1;
+  background-color: #EAE6D7;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.columna-renuncia p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
