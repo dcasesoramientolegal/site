@@ -5,37 +5,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
-<body>
-    <header  id="home" class="encabezado">
-        <div class="logo-contenedor">
-          <img src="logo/IMG_5261.PNG" alt="Logo Estudio Jurídico" class="logo">
-          <span class="nombre-estudio">ESTUDIO JURÍDICO</span>
-        </div>
-        
-        <nav class="nav">
-          <ul class="menu">
-            <li><a href="#hero" class="nav-item">Inicio</a></li>
-            <li><a href="#sobre-nosotros" class="nav-item">Sobre mí</a></li>
-        
-            <li class="dropdown">
-              <a href="#areas" class="nav-item dropbtn">Áreas de práctica</a>
-              <div class="dropdown-content">
-                <a href="#areas">Accidentes laborales</a>
-                <a href="#areas">Enfermedades laborales</a>
-                <a href="#areas">Reclamos en la ART</a>
-                <a href="#areas">Despidos</a>
-                <a href="#areas">Redacción de contratos laborales</a>
-                <a href="#areas">Accidentes de tránsito</a>
-                <a href="#areas">Alimentos</a>
-                <a href="#areas">Divorcios</a>
-                <a href="#areas">Sucesiones</a>
-                <a href="#areas">Usucapión</a>
+<body onload="mostrarSeccion('inicio')">
+  <header id="home" class="encabezado">
+    <div class="header-inner">
+      <div class="logo-contenedor">
+        <img src="logo/IMG_5261.PNG" alt="Logo Estudio Jurídico" class="logo">
+        <span class="nombre-estudio">ESTUDIO JURÍDICO</span>
+      </div>
+  
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="#hero" class="nav-item"  onclick="mostrarSeccion('inicio')">Inicio</a></li>
+          <li><a href="#sobre-nosotros" class="nav-item" onclick="mostrarSeccion('inicio')">Sobre mí</a></li>
+          <li class="dropdown">
+            <a href="#areas" class="nav-item dropbtn" onclick="mostrarSeccion('inicio')">Áreas de práctica</a>
+            <div class="dropdown-content">
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Accidentes y enfermedades laborales</a>
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Amparos de salud</a>
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Reclamos en la ART</a>
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Despidos</a>
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Redacción de contratos laborales</a>
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Accidentes de tránsito</a>
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Alimentos</a>
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Divorcios</a>
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Sucesiones</a>
+                <a href="#areas" onclick="mostrarSeccion('inicio')">Usucapión</a>
               </div>
             </li>
-            <li><a href="#contacto" class="nav-item">Contacto</a></li>
-        
+            <li><a href="#" class="nav-item" onclick="mostrarSeccion('indemnizaciones')">Indemnizaciones</a></li>
+            <li><a href="#comentarios" class="nav-item" onclick="mostrarSeccion('inicio')">Contacto</a></li>
             <li class="consulta-item"> 
               <a href="https://wa.me/+5491165477968" target="_blank" class="nav-item">
                 <div class="consulta-texto">
@@ -47,9 +48,9 @@
             </li>
           </ul>
         </nav>
-        
-  </header>
-
+      </div>
+    </header>
+  <article id="inicio" class="seccion-visible">
   <section id="hero" class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -86,8 +87,8 @@
     <div class="lista-areas">
       <div class="columna">
         <ul>
-          <li>Accidentes laborales</li>
-          <li>enfermedades laborales</li>
+          <li>Accidentes y enfermedades laborales</li>
+          <li>Amparos de salud</li>
           <li>Reclamos en la ART</li>
           <li>Despidos</li>
           <li>Redacción de contratos laborales</li>
@@ -104,8 +105,13 @@
       </div>
     </div>
   </section>
-  
+  <section>
+    <div>
+
+    </div>
+  </section>
   <section id="como-trabajamos" class="servicios">
+    <h1 class="titulo-seccion">¿Cómo Trabajamos?</h1>
     <div class="servicio">
       <i class="fas fa-phone"></i> <!-- Ícono de teléfono -->
       <h3>Contacto</h3>
@@ -115,7 +121,7 @@
     <div class="servicio">
       <i class="fas fa-comments"></i> <!-- Ícono de consulta -->
       <h3>Consulta</h3>
-      <p>Agendamos una consulta en el día y hora que mejor te quede. Si la consulta es sobre <b>temas laborales, será sin costo</b>. Para otros asuntos, se aplicará un arancel.  
+      <p>Agendamos una consulta en el día y hora que mejor te quede. Si la consulta es sobre <b>temas laborales, será sin costo para trabajadores</b>. Para otros asuntos, se aplicará un arancel.  
       </p>
     </div>
     
@@ -134,20 +140,29 @@
   </section>
 
   <section id="testimonios" class="testimonios">
-      <h2>Testimonios</h2>
-      <div class="contenedor-testimonios">
-        <div class="testimonio">
+    <h2>Testimonios</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
           <img src="logo/1.png" alt="Testimonio de Verónica">
         </div>
-        <div class="testimonio">
+        <div class="swiper-slide">
           <img src="logo/2.png" alt="Testimonio de Cristian">
         </div>
-        <div class="testimonio">
+        <div class="swiper-slide">
           <img src="logo/3.png" alt="Testimonio de Julio">
         </div>
+        <div class="swiper-slide">
+          <img src="logo/4.png" alt="Testimonio de Giuliana">
+        </div>
       </div>
-  </section>
-
+  
+      <!-- Controles -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>  
   <section id="comentarios" class="comentarios">
     <div class="comentarios-container">
       <div class="comentarios-content">
@@ -170,8 +185,83 @@
       </div>
     </div>
   </section>
-  
-  
+</article>
+
+<main>
+  <div id="indemnizaciones" class="seccion-oculta indemnizaciones-seccion">
+    <h1>Indemnizaciones</h1>
+    <h3>Por accidente</h3>
+    <table class="tabla-indemnizaciones">
+      <thead>
+        <tr>
+          <th><em><b>En ocasión de trabajo</b></em></th>
+          <th><em><b>Accidente in itinere</b></em></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="formula-indemnizacion">
+            <b>53</b> × <b>IBM</b> × <b>% Incapacidad</b> × (<b>65</b> / <b>Edad del trabajador</b> al momento del siniestro)
+          </td>
+          <td class="formula-indemnizacion">
+            <b>53</b> × <b>IBM</b> × <b>% Incapacidad</b> × (<b>65</b> / <b>Edad del trabajador</b> al momento del siniestro)
+          </td>
+        </tr>
+        <tr>
+          <td><b>+</b></td>
+          <td><b>No hay adicional</b></td>
+        </tr>
+        <tr>
+          <td>Adicional del <b>20% del resultado del cálculo anterior</b> (Art 3 Ley 24.557), esto siempre y cuando el accidente haya ocurrido en la jornada laboral.</td>
+          <td>El accidente ocurre en el trayecto del domicilio a la casa o viceversa</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Por despido</h3>
+    <table class="tabla-indemnizaciones">
+      <thead>
+        <tr>
+          <th><em><b>Despido sin causa</b></em></th>
+          <th><em><b>Despido con causa</em></b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Indemnización por antigüedad:</b> Un mes de sueldo por cada año trabajado o fracción mayor a tres meses. </td>
+          <td><b>Días trabajados en el mes del despido:</b> Se calcula la parte proporcional del salario correspondiente a los días trabajados hasta el día del despido.</td>
+        </tr>
+        <tr>
+          <td><b>Indemnización sustitutiva de preaviso:</b> Se abona un sueldo por no haber avisado con anticipación el despido.</td>
+          <td><b>Vacaciones no gozadas:</b> Se abona la parte proporcional de las vacaciones no disfrutadas en el período de trabajo hasta el despido.</td>
+        </tr>
+        <tr>
+          <td><b>Integración del mes de despido:</b> Se paga el mes completo, aunque el despido no se produzca el último día del mes.</td>
+          <td><b>Aguinaldo proporcional:</b> Se calcula la parte proporcional del aguinaldo correspondiente al período de trabajo hasta el despido</td>
+        </tr>
+        <tr>
+          <td><b>proporcional:</b> Se calcula el aguinaldo correspondiente al tiempo trabajado hasta el despido</td>
+        </tr>
+        <tr>
+          <td><b>no gozadas:</b> Se debe indemnizar el período de vacaciones no disfrutadas. </td>
+        </tr>
+        <tr>
+          <td><b>Días trabajados:</b> Se paga la remuneración correspondiente a los días trabajados en el mes del despido</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Por renuncia</h3>
+    <div class="texto-renuncia">
+      <div class="columna-renuncia">
+        <p><strong>Días trabajados en el mes del despido:</strong><br> Se calcula la parte proporcional del salario correspondiente a los días trabajados hasta el día del despido. </p>
+      </div>
+      <div class="columna-renuncia">
+        <p><strong>Vacaciones no gozadas:</strong><br>Se abona la parte proporcional de las vacaciones no disfrutadas en el período de trabajo hasta el despido.</p>
+      </div>
+      <div class="columna-renuncia">
+        <p><strong>Aguinaldo proporcional:</strong><br>Se calcula la parte proporcional del aguinaldo correspondiente al período de trabajo hasta el despido</p>
+      </div>
+  </div>
+</main>
 
   <footer id="contacto" class="footer">
     <div class="social-icons">
@@ -180,20 +270,33 @@
       <a href="mailto:lariacatalogni@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
     </div>
   
-    <div class="footer-button">
+<!--     <div class="footer-button">
       <a class="toTop" href="#home" id="toTopLink">Ir al inicio</a>
-    </div>
+    </div> -->
   </footer>
-  <script>
-    const link = document.getElementById('toTopLink');
-    link.addEventListener('click', e => {
-      e.preventDefault();                       // no navegues por defecto
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      // opcional: limpiar la parte '#' de la URL
-      history.replaceState(null, '', window.location.pathname);
+
+<!--   <script>
+    document.getElementById('toTopLink').addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      const seccionInicio = document.getElementById('inicio');
+      const seccionIndemnizaciones = document.getElementById('indemnizaciones');
+  
+      if (seccionInicio.classList.contains('seccion-visible')) {
+        // Scroll del documento
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (seccionIndemnizaciones.classList.contains('seccion-visible')) {
+        // Scroll interno en el contenedor de indemnizaciones
+        seccionIndemnizaciones.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+  
+      // Opcional: limpiar el hash de la URL
+ /*      history.replaceState(null, '', window.location.pathname); */
     });
-  </script>
- <script>
+  </script> -->
+  
+
+<script>
   // Animación de servicios
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -217,5 +320,64 @@
     areasPractica.classList.add('visible');
   });
 </script>
+
+<script>
+function mostrarSeccion(id) {
+  const secciones = document.querySelectorAll('.seccion-visible, .seccion-oculta');
+  secciones.forEach(sec => {
+    sec.classList.remove('seccion-visible');
+    sec.classList.add('seccion-oculta');
+  });
+
+  const mostrar = document.getElementById(id);
+  mostrar.classList.remove('seccion-oculta');
+  mostrar.classList.add('seccion-visible');
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 3,
+    centeredSlides: true,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      slideChangeTransitionEnd: function () {
+        updateSlideStyles(this);
+      },
+      init: function () {
+        updateSlideStyles(this);
+      }
+    },
+  });
+
+  function updateSlideStyles(swiperInstance) {
+    swiperInstance.slides.forEach(slide => {
+      slide.classList.remove('active-center', 'adjacent');
+    });
+
+    const activeIndex = swiperInstance.activeIndex;
+    const slides = swiperInstance.slides;
+
+    slides[activeIndex].classList.add('active-center');
+    if (slides[activeIndex + 1]) slides[activeIndex + 1].classList.add('adjacent');
+    if (slides[activeIndex - 1]) slides[activeIndex - 1].classList.add('adjacent');
+  }
+</script>
+
 </body>
 </html>
