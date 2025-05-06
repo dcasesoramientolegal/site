@@ -348,22 +348,23 @@
 </script>
 
 <script>
-function mostrarSeccion(id) {
-  const secciones = document.querySelectorAll('.seccion-visible, .seccion-oculta');
-  secciones.forEach(sec => {
-    sec.classList.remove('seccion-visible');
-    sec.classList.add('seccion-oculta');
-  });
-
-  const mostrar = document.getElementById(id);
-  mostrar.classList.remove('seccion-oculta');
-  mostrar.classList.add('seccion-visible');
-
-  // Scroll después de mostrar la sección
-  setTimeout(() => {
-    mostrar.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 100); // 100 ms de espera para asegurar que ya es visible
-}
+  function mostrarSeccion(id) {
+    const secciones = document.querySelectorAll('.seccion-visible, .seccion-oculta');
+    secciones.forEach(sec => {
+      sec.classList.remove('seccion-visible');
+      sec.classList.add('seccion-oculta');
+    });
+  
+    const mostrar = document.getElementById(id);
+    mostrar.classList.remove('seccion-oculta');
+    mostrar.classList.add('seccion-visible');
+  
+    if (id === 'indemnizaciones') {
+      document.getElementById('indemnizaciones').scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
