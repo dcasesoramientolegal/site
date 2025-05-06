@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body onload="mostrarSeccion('inicio')">
@@ -14,6 +15,7 @@
       <div class="logo-contenedor">
         <img src="logo/IMG_5261.PNG" alt="Logo Estudio Jurídico" class="logo">
         <span class="nombre-estudio">ESTUDIO JURÍDICO</span>
+        <button id="hamburguesa" class="hamburguesa">&#9776;</button>
       </div>
   
       <nav class="nav">
@@ -56,7 +58,7 @@
     <div class="hero-content">
       <h1>Soluciones<br>Legales<br>Confiables</h1>
       <p>En DC Estudio Jurídico trabajamos día a día <br>
-        para brindar asesoramiento jurídico personalizado <br>
+        para brindar asesoramiento jurídico <br>personalizado 
         y de excelencia.<br>
         <br><b>Tu confianza es nuestro mayor compromiso</b>.
       </p>
@@ -76,6 +78,7 @@
       <a href="https://www.instagram.com/dcasesoramientolegal/" target="_blank"><img src="logo/IMG_5015.jpeg" alt="Foto abogada"></a>
     </div>  
   </section>
+  
   <section id="areas" class="areas-practica">
     <div class="titulo-areas">
       <h3>Áreas de</h3>
@@ -105,11 +108,7 @@
       </div>
     </div>
   </section>
-  <section>
-    <div>
 
-    </div>
-  </section>
   <section id="como-trabajamos" class="servicios">
     <h1 class="titulo-seccion">¿Cómo Trabajamos?</h1>
     <div class="servicio">
@@ -163,6 +162,32 @@
       <div class="swiper-pagination"></div>
     </div>
   </section>  
+
+  <section id="galeria" class="galeria">
+    <h2>Galería</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="https://www.instagram.com/reel/DIPXngAPtKR/?igsh=MWN5d251YnFyM2UyMA=="><img src="logo/g1.jpg" alt="Testimonio de Verónica"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.instagram.com/reel/DJSUOFHP1xy/?igsh=eHQ3ZXB2a3V3Z2Nw"><img src="logo/g2.jpg" alt="Testimonio de Cristian"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.instagram.com/reel/DCSLQInPGKi/?igsh=MWsyYzQ5bWQ2NjIyOQ=="><img src="logo/g3.jpg" alt="Testimonio de Julio"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.instagram.com/reel/DCAJgcJvL1V/?igsh=dmIyc2FraW9nN3V3"><img src="logo/g4.jpg" alt="Testimonio de Giuliana"></a>
+        </div>
+      </div>
+  
+      <!-- Controles -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
   <section id="comentarios" class="comentarios">
     <div class="comentarios-container">
       <div class="comentarios-content">
@@ -185,6 +210,7 @@
       </div>
     </div>
   </section>
+
 </article>
 
 <main>
@@ -338,32 +364,30 @@ function mostrarSeccion(id) {
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-  const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    slidesPerView: 3,
-    centeredSlides: true,
-    spaceBetween: 30,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 3,
+  centeredSlides: true, // ⭐ ESTA LÍNEA CENTRA LA DIAPOSITIVA ACTIVA
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      centeredSlides: false // 🔹 en mobile NO hace falta centrar
     },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    on: {
-      slideChangeTransitionEnd: function () {
-        updateSlideStyles(this);
-      },
-      init: function () {
-        updateSlideStyles(this);
-      }
-    },
-  });
+    769: {
+      slidesPerView: 3,
+      centeredSlides: true // 🔹 en desktop sí
+    }
+  }
+});
 
   function updateSlideStyles(swiperInstance) {
     swiperInstance.slides.forEach(slide => {
@@ -377,6 +401,61 @@ function mostrarSeccion(id) {
     if (slides[activeIndex + 1]) slides[activeIndex + 1].classList.add('adjacent');
     if (slides[activeIndex - 1]) slides[activeIndex - 1].classList.add('adjacent');
   }
+
+  const galeriaSwiper = new Swiper('#galeria .swiper-container', {
+  slidesPerView: 3,
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: '#galeria .swiper-button-next',
+    prevEl: '#galeria .swiper-button-prev'
+  },
+  pagination: {
+    el: '#galeria .swiper-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    769: {
+      slidesPerView: 3
+    }
+  }
+});
+</script>
+
+<script>
+  let lastScrollTop = 0;
+  const header = document.querySelector(".encabezado");
+
+  window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (window.innerWidth <= 768) {
+      if (currentScroll > lastScrollTop) {
+        // Bajando
+        header.style.transform = "translateY(-100%)";
+      } else {
+        // Subiendo
+        header.style.transform = "translateY(0)";
+      }
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const btnHamburguesa = document.getElementById("hamburguesa");
+    const nav = document.querySelector(".nav");
+
+    btnHamburguesa.addEventListener("click", function () {
+      nav.classList.toggle("activo");
+    });
+  });
 </script>
 
 </body>
