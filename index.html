@@ -110,7 +110,7 @@
   </section>
 
   <section id="como-trabajamos" class="servicios">
-    <h1 class="titulo-seccion">¿Cómo trabajamos?</h1>
+    <h1 class="titulo-seccion">¿Cómo Trabajamos?</h1>
     <div class="servicio">
       <i class="fas fa-phone"></i> <!-- Ícono de teléfono -->
       <h3>Contacto</h3>
@@ -358,6 +358,11 @@ function mostrarSeccion(id) {
   const mostrar = document.getElementById(id);
   mostrar.classList.remove('seccion-oculta');
   mostrar.classList.add('seccion-visible');
+
+  // Scroll después de mostrar la sección
+  setTimeout(() => {
+    mostrar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 100); // 100 ms de espera para asegurar que ya es visible
 }
 </script>
 
@@ -451,9 +456,17 @@ const swiper = new Swiper('.swiper-container', {
   document.addEventListener("DOMContentLoaded", function () {
     const btnHamburguesa = document.getElementById("hamburguesa");
     const nav = document.querySelector(".nav");
+    const navItems = document.querySelectorAll(".nav-item");
 
     btnHamburguesa.addEventListener("click", function () {
       nav.classList.toggle("activo");
+    });
+
+    navItems.forEach(item => {
+      item.addEventListener("click", function () {
+        // Cierra el menú al hacer clic en un ítem del nav
+        nav.classList.remove("activo");
+      });
     });
   });
 </script>
