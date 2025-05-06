@@ -933,13 +933,6 @@ padding: 0% 15% 0% 15%;
   position: relative; /* importante para posicionar las flechas */
 }
 
-#galeria h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #333;
-}
-
 #galeria .swiper-slide {
   display: flex;
   justify-content: center;
